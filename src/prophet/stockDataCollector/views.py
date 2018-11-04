@@ -3,7 +3,8 @@ from django.views.generic import TemplateView
 from stockDataCollector.models import stockData, companyNames
 from rest_framework import viewsets
 from stockDataCollector.serializers import stockDataSerializer, companyNamesSerializer
-
+from rest_framework import generics
+import django_filters.rest_framework
 
 # Create your views here.
 
@@ -23,3 +24,11 @@ class companyNamesApi(viewsets.ModelViewSet):
     """
     queryset = companyNames.objects.all()
     serializer_class = companyNamesSerializer
+
+'''
+class companyNamesApi(generics.ListAPIView):
+    queryset = stockData.objects.all()
+    serializer_class = companyNamesSerializer
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
+
+'''

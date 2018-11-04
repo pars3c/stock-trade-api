@@ -10,7 +10,7 @@ class stockDataSerializer(serializers.HyperlinkedModelSerializer):
 class companyNamesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = companyNames
-        fields = ('symbol_trade', 'company_name')
+        fields = ('symbol_trade', 'company_name', 'show_active')
 
 
 
