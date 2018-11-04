@@ -21,7 +21,8 @@ from django.conf.urls import url
 
 
 router = routers.DefaultRouter()
-router.register(r'stockdata', views.Api)
+router.register(r'stock-prices', views.stockPricesApi)
+router.register(r'company-names', views.companyNamesApi)
 
 
 urlpatterns = [

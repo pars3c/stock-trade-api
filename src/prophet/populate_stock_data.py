@@ -17,9 +17,12 @@ def adding_to_db(symbol_trade, date_trade, open_trade, close_trade, low_trade, h
                 p = stockData(symbol_trade='MSFTs2', date_trade="2018-11-02 16:00:00", open_trade=106.0100, close_trade=106.1400, low_trade=105.9100, high_trade=106.1900, volume_trade=825557)
                 p.save()
 
-def api_extraction(symbol):
+def api_stock_data_extraction(symbol):
         API_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + symbol + '&interval=1min&apikey=ZQ39SRI4010VT4OS&datatype=json'
         
+
+#def api_stock_data_extraction(symbol):
+
 
 if __name__ == "__main__":
     api_extraction()

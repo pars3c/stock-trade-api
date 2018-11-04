@@ -10,4 +10,7 @@ class stockData(models.Model):
     high_trade = models.FloatField()
     volume_trade = models.IntegerField()
 
-
+class companyNames(models.Model):
+    symbol_trade = models.CharField(max_length=10)
+    company_name = models.CharField(max_length=100)
+    show_active = models.BooleanField(null=True)
